@@ -34,7 +34,6 @@ class DadJoke extends React.Component {
     render() {
         return <h1>{this.state.joke}</h1 >
     }
-
 }
 
 function getDadJoke() {

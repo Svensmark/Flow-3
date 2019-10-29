@@ -46,15 +46,3 @@ export default function App() {
     return (<MemberDemo members={members} />);
 }
 
-
-//List and keys questions:
-
-/*
-Q: What is the purpose of the key value, which must be given to individual rows n a react list?
-A: The purpose is to have an unique identifier of the specifc element, so that if changes are made
-    the virtual DOM can pickup specifc changes and then change them individually instead of remaking
-    the entire DOM for a single change.
-
-
-*/
-

@@ -37,7 +37,38 @@ function TableItems(props) {
   return <table><tbody><NumberTable numbers={props.numbers} /></tbody></table>
 }
 
+class NumberClass extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      numbers: [1, 2, 3, 4],
+      count: 5
+    }
+    var numbersHold = [...this.state.numbers];
+    this.addNumber = () => numbersHold.push(this.state.count) && this.setState({numbers: [...numbersHold]});
+    this.increment = () => this.setState({cout: this.state.count ++})
+  }
+
+  componentDidMount() {
+    let intervalId = setInterval(() => {
+      this.addNumber()
+      this.increment() 
+    }, 1000)
+    this.setState({ intervalId: intervalId })
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.intervalId);
+    this.state.count = 5;
+  }
+
+  render() {
+    return <ListDemo numbers={this.state.numbers} />;
+  }
+}
+
+
+
 export default function App() {
-  const [numbers] = useState([1, 2, 3, 4]);
-  return <ListDemo numbers={numbers} />;
+  return <NumberClass />;
 }
