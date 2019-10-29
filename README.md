@@ -1,6 +1,9 @@
 # Flow 3 Afleveringer
 
 ## Questions and answers to "List and Keys  (Fall 2019)" document.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 Q: What is the purpose of the key value, which must be given to individual rows n a react list?
 
 A: The purpose is to have an unique identifier of the specifc element, so that if changes are made
