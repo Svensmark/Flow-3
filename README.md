@@ -1,5 +1,7 @@
 # Flow 3 Afleveringer
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 ## Questions and answers to "List and Keys  (Fall 2019)" document.
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -44,3 +46,6 @@ A: It is inside the constructor of a class component.
 Q: How must you set state all other places?
 
 A: First you define a constant with both a name and a setName, which you set equal to a useState with the value of name.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
