@@ -5,6 +5,8 @@ import App from './ListDemoApp';
 import App2 from './ListDemoApp2'
 import App3 from './App'
 import App4 from './App2'
+import App5 from './App3'
+import App6 from './App4'
 
 let app = <App/>
 
@@ -15,6 +17,8 @@ const DontUseMeForReal = () => {
          <a href="/"  id="App2">ListDemoApp2</a> &nbsp;
          <a href="/"  id="App3">useState button</a> &nbsp;
          <a href="/"  id="App4">Time Display</a> &nbsp;
+         <a href="/"  id="App5">Chuck Norris Joke</a> &nbsp;
+         <a href="/"  id="App6">Dad Joke</a> &nbsp;
          {app}
         </div>
     )
@@ -28,6 +32,8 @@ function handleSelect(event) {
         case "App2": app = <App2 />; break;
         case "App3": app = <App3 />; break;
         case "App4": app = <App4 />; break;
+        case "App5": app = <App5 />; break;
+        case "App6": app = <App6 />; break;
     }
     ReactDOM.render(<DontUseMeForReal />, document.getElementById('root'));
 }

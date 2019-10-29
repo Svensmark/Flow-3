@@ -20,7 +20,9 @@ function MemberDemo(props) {
     return (
         <div>
             <h4>All Members</h4>
-            <MemberTable members={props.members} />
+            <div>
+                <MemberTable members={props.members} />
+            </div>
         </div>
     );
 }
