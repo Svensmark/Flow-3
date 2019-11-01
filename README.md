@@ -49,3 +49,34 @@ A: First you define a constant with both a name and a setName, which you set equ
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------------------------------------------
+
+## Questions and answers to "Lifting State Up" document.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q: What is meant by the react term “Lifting State Up”?
+
+A: To move a shared state up to their closest "ancestor" (shared parent component)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q: Where do you lift it up to?
+
+A: You lift the state up their closest "ancestor" (shared parent component)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q: Which way does React recommend data to flow: From sibling to sibling, from bottom to top or from top to bottom?
+
+A: Data should always flow downwards, which is the reason why we need lifting states when we want components to have shared states.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q: Lifting state up, involves a great deal of boilerplate code, what’s the benefit we get from doing “things” like this?
+
+A: The benefit of doing this is that it makes the connection between components and their use much much easier, as in if one component changes the state of another, all we have to do is to change the states they use
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
