@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 
 export default function App() {
@@ -13,17 +13,17 @@ class Clock extends React.Component {
         this.state = {
             date: new Date().toLocaleTimeString()
         }
-        this.updateTime = () => this.setState({date: new Date().toLocaleTimeString()})
+        this.updateTime = () => this.setState({ date: new Date().toLocaleTimeString() })
     }
-    
+
     componentDidMount() {
         let intervalId = setInterval(() => {
             this.updateTime()
             console.log("component is running")
-        },1000)
-        this.setState({ intervalId: intervalId})
+        }, 1000)
+        this.setState({ intervalId: intervalId })
     }
-    
+
     componentWillUnmount() {
         clearInterval(this.state.intervalId);
     }
@@ -33,3 +33,20 @@ class Clock extends React.Component {
     }
 }
 
+
+//Made as a function component (not done)
+function ClockFunct(props) {
+    let [date, setDate] = useState(new Date().toLocaleTimeString());
+
+    useEffect(() => {
+        setInterval(() => {
+            setDate(new Date().toLocaleTimeString()); 
+        }, 1000)
+
+        return function cleanup() {
+
+        }
+    })
+
+    return <h1>TIME: {date}</h1>
+}
