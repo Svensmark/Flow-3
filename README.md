@@ -1,5 +1,7 @@
 # Flow 3 Afleveringer
 
+Disclaimer: Nåede desværre ikke alle opgaver for denne uge.
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ## Questions and answers to "List and Keys  (Fall 2019)" document.
